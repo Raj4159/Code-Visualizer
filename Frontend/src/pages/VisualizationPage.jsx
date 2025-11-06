@@ -18,9 +18,9 @@ export default function VisualizationPage() {
     // For now, load from bubble-sort.json
     // fetch('/bubble-sort.json')
     // fetch('/Pointers.json')
-    // fetch('/sliding_window.json')
+    fetch('/sliding_window.json')
     // fetch('/reverse_array.json')
-    fetch('/gemini_output.json')
+    // fetch('/gemini_output.json')
       .then(res => res.json())
       .then(data => setJsonData(data))
       .catch(err => console.error('Error loading JSON:', err));
