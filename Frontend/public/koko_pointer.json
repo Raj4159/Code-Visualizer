@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "questionId": "koko-eating-bananas-binary-search",
+    "title": "Koko Eating Bananas - Binary Search Visualization",
+    "type": "pointer",
+    "complexity": {
+      "time": "O(n * log(max_pile))",
+      "space": "O(1)"
+    },
+    "sampleInput": {
+      "piles": [3, 6, 7, 11],
+      "h": 8
+    },
+    "sampleOutput": {
+      "minimumSpeed": 4,
+      "explanation": "At speed 4, Koko finishes all piles in exactly 8 hours."
+    }
+  },
+  "steps": [
+    {
+      "id": 0,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": []
+        }
+      ],
+      "pointers": [],
+      "description": "Piles: [3, 6, 7, 11 bananas]. H=8 hours. Find minimum eating speed using binary search."
+    },
+    {
+      "id": 1,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0, 1, 2, 3]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xff6b6b"
+        },
+        {
+          "name": "right",
+          "arrayId": "piles",
+          "index": 3,
+          "color": "0x4ecdc4"
+        },
+        {
+          "name": "mid(6)",
+          "arrayId": "piles",
+          "index": 2,
+          "color": "0xfbbf24"
+        }
+      ],
+      "description": "Search range: [1, 11]. Mid = 6. Testing speed 6 bananas/hour. Total = 6 hours. VALID!"
+    },
+    {
+      "id": 2,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0, 1]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xff6b6b"
+        },
+        {
+          "name": "right",
+          "arrayId": "piles",
+          "index": 1,
+          "color": "0x4ecdc4"
+        }
+      ],
+      "description": "Speed 6 works. Search lower speeds. New range: [1, 5]."
+    },
+    {
+      "id": 3,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xff6b6b"
+        },
+        {
+          "name": "mid(3)",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xfbbf24"
+        }
+      ],
+      "description": "Mid = 3. Testing speed 3 bananas/hour. Total = 10 hours. TOO SLOW!"
+    },
+    {
+      "id": 4,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0, 1]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xff6b6b"
+        },
+        {
+          "name": "right",
+          "arrayId": "piles",
+          "index": 1,
+          "color": "0x4ecdc4"
+        }
+      ],
+      "description": "Speed 3 is too slow. New range: [4, 5]."
+    },
+    {
+      "id": 5,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0, 1]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xff6b6b"
+        },
+        {
+          "name": "mid(4)",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0xfbbf24"
+        },
+        {
+          "name": "right",
+          "arrayId": "piles",
+          "index": 1,
+          "color": "0x4ecdc4"
+        }
+      ],
+      "description": "Mid = 4. Testing speed 4 bananas/hour. Total = 8 hours. VALID!"
+    },
+    {
+      "id": 6,
+      "arrays": [
+        {
+          "id": "piles",
+          "values": [3, 6, 7, 11],
+          "highlights": [0, 1]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "Answer: 4",
+          "arrayId": "piles",
+          "index": 0,
+          "color": "0x10b981"
+        }
+      ],
+      "description": "Search complete! Answer: 4 bananas/hour is the minimum speed."
+    }
+  ]
+}

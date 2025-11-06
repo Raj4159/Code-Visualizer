@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "questionId": "selection-sort-demo-01",
+    "title": "Selection Sort Algorithm",
+    "type": "sorting",
+    "algorithm": "selection-sort",
+    "complexity": {
+      "time": "O(n²)",
+      "space": "O(1)"
+    }
+  },
+  "steps": [
+    {
+      "id": 0,
+      "array": [64, 25, 12, 22, 11],
+      "comparing": [],
+      "sorted": [],
+      "swap": null,
+      "description": "Initialize array: [64, 25, 12, 22, 11]. Selection Sort finds the minimum element and puts it in the correct place."
+    },
+    {
+      "id": 1,
+      "array": [64, 25, 12, 22, 11],
+      "comparing": [0, 1],
+      "sorted": [],
+      "swap": null,
+      "description": "Find the minimum in the unsorted part. Start by comparing 64 and 25. Current minimum is 25."
+    },
+    {
+      "id": 2,
+      "array": [64, 25, 12, 22, 11],
+      "comparing": [1, 2],
+      "sorted": [],
+      "swap": null,
+      "description": "Compare current minimum (25) with 12. New minimum is 12."
+    },
+    {
+      "id": 3,
+      "array": [64, 25, 12, 22, 11],
+      "comparing": [2, 3],
+      "sorted": [],
+      "swap": null,
+      "description": "Compare current minimum (12) with 22. Minimum is still 12."
+    },
+    {
+      "id": 4,
+      "array": [64, 25, 12, 22, 11],
+      "comparing": [2, 4],
+      "sorted": [],
+      "swap": null,
+      "description": "Compare current minimum (12) with 11. New minimum is 11 (at index 4)."
+    },
+    {
+      "id": 5,
+      "array": [11, 25, 12, 22, 64],
+      "comparing": [],
+      "sorted": [0],
+      "swap": [0, 4],
+      "description": "Swap the minimum element (11) with the first unsorted element (64). The first element is now sorted."
+    },
+    {
+      "id": 6,
+      "array": [11, 25, 12, 22, 64],
+      "comparing": [1, 2],
+      "sorted": [0],
+      "swap": null,
+      "description": "Find the minimum in the remaining unsorted part. Compare 25 and 12. Current minimum is 12."
+    },
+    {
+      "id": 7,
+      "array": [11, 25, 12, 22, 64],
+      "comparing": [2, 3],
+      "sorted": [0],
+      "swap": null,
+      "description": "Compare current minimum (12) with 22. Minimum is still 12."
+    },
+    {
+      "id": 8,
+      "array": [11, 25, 12, 22, 64],
+      "comparing": [2, 4],
+      "sorted": [0],
+      "swap": null,
+      "description": "Compare current minimum (12) with 64. Minimum is still 12 (at index 2)."
+    },
+    {
+      "id": 9,
+      "array": [11, 12, 25, 22, 64],
+      "comparing": [],
+      "sorted": [0, 1],
+      "swap": [1, 2],
+      "description": "Swap the minimum (12) with the first unsorted element (25). First two elements are now sorted."
+    },
+    {
+      "id": 10,
+      "array": [11, 12, 25, 22, 64],
+      "comparing": [2, 3],
+      "sorted": [0, 1],
+      "swap": null,
+      "description": "Find minimum in the rest. Compare 25 and 22. New minimum is 22."
+    },
+    {
+      "id": 11,
+      "array": [11, 12, 25, 22, 64],
+      "comparing": [3, 4],
+      "sorted": [0, 1],
+      "swap": null,
+      "description": "Compare current minimum (22) with 64. Minimum is still 22."
+    },
+    {
+      "id": 12,
+      "array": [11, 12, 22, 25, 64],
+      "comparing": [],
+      "sorted": [0, 1, 2],
+      "swap": [2, 3],
+      "description": "Swap the minimum (22) with the first unsorted element (25)."
+    },
+    {
+        "id": 13,
+        "array": [11, 12, 22, 25, 64],
+        "comparing": [3, 4],
+        "sorted": [0, 1, 2],
+        "swap": null,
+        "description": "Find minimum in the final unsorted part. Compare 25 and 64. No swap needed."
+    },
+    {
+      "id": 14,
+      "array": [11, 12, 22, 25, 64],
+      "comparing": [],
+      "sorted": [0, 1, 2, 3, 4],
+      "swap": null,
+      "description": "Sorting complete. The array is now fully sorted."
+    }
+  ]
+}

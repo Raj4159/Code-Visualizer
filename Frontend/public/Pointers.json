@@ -1,0 +1,543 @@
+{
+  "meta": {
+    "questionId": "merge-sorted-arrays-002",
+    "title": "Merge Two Sorted Arrays with Duplicates",
+    "type": "two-pointer",
+    "complexity": {
+      "time": "O(n + m)",
+      "space": "O(n + m)"
+    }
+  },
+  "steps": [
+    {
+      "id": 0,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": []
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": []
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 0
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 0
+        }
+      ],
+      "variables": {
+        "i": 0,
+        "j": 0,
+        "k": 0
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "description": "Initialize pointers i and j at start of both sorted arrays. We'll merge them in-place using two-pointer technique, maintaining sorted order."
+    },
+    {
+      "id": 1,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [0]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [0]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 0
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 0
+        }
+      ],
+      "variables": {
+        "i": 0,
+        "j": 0,
+        "k": 0
+      },
+      "result": {
+        "type": "array",
+        "value": []
+      },
+      "description": "Compare nums1[0]=1 and nums2[0]=2. Since 1 < 2, we select element from nums1."
+    },
+    {
+      "id": 2,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [1]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [0]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 1
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 0
+        }
+      ],
+      "variables": {
+        "i": 1,
+        "j": 0,
+        "k": 1
+      },
+      "result": {
+        "type": "array",
+        "value": [1]
+      },
+      "description": "Added 1 to result. Move pointer i forward. Now compare nums1[1]=4 with nums2[0]=2. Since 2 < 4, select from nums2."
+    },
+    {
+      "id": 3,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [1]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [1]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 1
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 1
+        }
+      ],
+      "variables": {
+        "i": 1,
+        "j": 1,
+        "k": 2
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2]
+      },
+      "description": "Added 2 to result. Move pointer j forward. Compare nums1[1]=4 with nums2[1]=3. Since 3 < 4, select from nums2."
+    },
+    {
+      "id": 4,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [1]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [2]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 1
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 2
+        }
+      ],
+      "variables": {
+        "i": 1,
+        "j": 2,
+        "k": 3
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3]
+      },
+      "description": "Added 3 to result. Move pointer j forward. Compare nums1[1]=4 with nums2[2]=6. Since 4 < 6, select from nums1."
+    },
+    {
+      "id": 5,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [2]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [2]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 2
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 2
+        }
+      ],
+      "variables": {
+        "i": 2,
+        "j": 2,
+        "k": 4
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4]
+      },
+      "description": "Added 4 to result. Move pointer i forward. Compare nums1[2]=5 with nums2[2]=6. Since 5 < 6, select from nums1."
+    },
+    {
+      "id": 6,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [3]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [2]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 3
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 2
+        }
+      ],
+      "variables": {
+        "i": 3,
+        "j": 2,
+        "k": 5
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5]
+      },
+      "description": "Added 5 to result. Move pointer i forward. Compare nums1[3]=9 with nums2[2]=6. Since 6 < 9, select from nums2."
+    },
+    {
+      "id": 7,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [3]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [3]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 3
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 3
+        }
+      ],
+      "variables": {
+        "i": 3,
+        "j": 3,
+        "k": 6
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6]
+      },
+      "description": "Added 6 to result. Move pointer j forward. Compare nums1[3]=9 with nums2[3]=10. Since 9 < 10, select from nums1."
+    },
+    {
+      "id": 8,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [4]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [3]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 4
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 3
+        }
+      ],
+      "variables": {
+        "i": 4,
+        "j": 3,
+        "k": 7
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9]
+      },
+      "description": "Added 9 to result. Move pointer i forward. Compare nums1[4]=12 with nums2[3]=10. Since 10 < 12, select from nums2."
+    },
+    {
+      "id": 9,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [4]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [4]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 4
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 4
+        }
+      ],
+      "variables": {
+        "i": 4,
+        "j": 4,
+        "k": 8
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9, 10]
+      },
+      "description": "Added 10 to result. Move pointer j forward. Compare nums1[4]=12 with nums2[4]=11. Since 11 < 12, select from nums2."
+    },
+    {
+      "id": 10,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [4]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [5]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 4
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 5
+        }
+      ],
+      "variables": {
+        "i": 4,
+        "j": 5,
+        "k": 9
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9, 10, 11]
+      },
+      "description": "Added 11 to result. Move pointer j forward. Compare nums1[4]=12 with nums2[5]=14. Since 12 < 14, select from nums1."
+    },
+    {
+      "id": 11,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [5]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": [5]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 5
+        },
+        {
+          "name": "j",
+          "arrayId": "array2",
+          "index": 5
+        }
+      ],
+      "variables": {
+        "i": 5,
+        "j": 5,
+        "k": 10
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12]
+      },
+      "description": "Added 12 to result. Move pointer i forward. Compare nums1[5]=15 with nums2[5]=14. Since 14 < 15, select from nums2."
+    },
+    {
+      "id": 12,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": [5]
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": []
+        }
+      ],
+      "pointers": [
+        {
+          "name": "i",
+          "arrayId": "array1",
+          "index": 5
+        }
+      ],
+      "variables": {
+        "i": 5,
+        "j": 6,
+        "k": 11
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 14]
+      },
+      "description": "Added 14 to result. Pointer j reached end. Add remaining elements from nums1. Compare nums1[5]=15."
+    },
+    {
+      "id": 13,
+      "arrays": [
+        {
+          "id": "array1",
+          "label": "nums1",
+          "values": [1, 4, 5, 9, 12, 15],
+          "highlights": []
+        },
+        {
+          "id": "array2",
+          "label": "nums2",
+          "values": [2, 3, 6, 10, 11, 14],
+          "highlights": []
+        }
+      ],
+      "pointers": [],
+      "variables": {
+        "i": 6,
+        "j": 6,
+        "k": 12
+      },
+      "result": {
+        "type": "array",
+        "value": [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 14, 15]
+      },
+      "description": "Merge complete! All elements from both arrays have been successfully merged in sorted order. Final sorted array: [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 14, 15]"
+    }
+  ]
+}

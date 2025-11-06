@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "questionId": "reverse-array-leetcode",
+    "title": "Reverse an Array (Two-Pointers)",
+    "type": "pointer",
+    "complexity": {
+      "time": "O(n)",
+      "space": "O(1)"
+    },
+    "sampleInput": {
+      "array": ["h", "e", "l", "l", "o"]
+    },
+    "sampleOutput": {
+      "reversedArray": ["o", "l", "l", "e", "h"]
+    }
+  },
+  "steps": [
+    {
+      "id": 0,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["h", "e", "l", "l", "o"],
+          "highlights": []
+        }
+      ],
+      "pointers": [],
+      "description": "Initial array. We will use two pointers, 'left' and 'right', to reverse the array in-place."
+    },
+    {
+      "id": 1,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["h", "e", "l", "l", "o"],
+          "highlights": [0, 4]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "main",
+          "index": 0
+        },
+        {
+          "name": "right",
+          "arrayId": "main",
+          "index": 4
+        }
+      ],
+      "description": "Initialize 'left' pointer at the start and 'right' pointer at the end. Comparing 'h' and 'o'."
+    },
+    {
+      "id": 2,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["o", "e", "l", "l", "h"],
+          "highlights": [0, 4]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "main",
+          "index": 0
+        },
+        {
+          "name": "right",
+          "arrayId": "main",
+          "index": 4
+        }
+      ],
+      "description": "Swap elements at 'left' and 'right' pointers. Array is now ['o', 'e', 'l', 'l', 'h']."
+    },
+    {
+      "id": 3,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["o", "e", "l", "l", "h"],
+          "highlights": [1, 3]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "main",
+          "index": 1
+        },
+        {
+          "name": "right",
+          "arrayId": "main",
+          "index": 3
+        }
+      ],
+      "description": "Move pointers inward. 'left' is now at index 1 and 'right' is at index 3. Comparing 'e' and 'l'."
+    },
+    {
+      "id": 4,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["o", "l", "l", "e", "h"],
+          "highlights": [1, 3]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "main",
+          "index": 1
+        },
+        {
+          "name": "right",
+          "arrayId": "main",
+          "index": 3
+        }
+      ],
+      "description": "Swap elements at the new pointer positions. Array is now ['o', 'l', 'l', 'e', 'h']."
+    },
+    {
+      "id": 5,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["o", "l", "l", "e", "h"],
+          "highlights": [2]
+        }
+      ],
+      "pointers": [
+        {
+          "name": "left",
+          "arrayId": "main",
+          "index": 2
+        },
+        {
+          "name": "right",
+          "arrayId": "main",
+          "index": 2
+        }
+      ],
+      "description": "Move pointers inward again. They have now met or crossed. The reversal is complete."
+    },
+    {
+      "id": 6,
+      "arrays": [
+        {
+          "id": "main",
+          "values": ["o", "l", "l", "e", "h"],
+          "highlights": [0, 1, 2, 3, 4]
+        }
+      ],
+      "pointers": [],
+      "description": "Final reversed array: ['o', 'l', 'l', 'e', 'h']."
+    }
+  ]
+}

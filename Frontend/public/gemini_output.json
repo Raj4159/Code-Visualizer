@@ -1,0 +1,114 @@
+{
+    "meta": {
+      "questionId": "reverse-array",
+      "title": "Reverse an Array",
+      "type": "two-pointer",
+      "complexity": {
+        "time": "O(n)",
+        "space": "O(n)"
+      }
+    },
+    "steps": [
+      {
+        "id": 0,
+        "array": [
+          1,
+          4,
+          3,
+          2,
+          6,
+          5
+        ],
+        "pointers": [],
+        "variables": {},
+        "result": {
+          "type": "array",
+          "value": []
+        },
+        "description": "Initial array."
+      },
+      {
+        "id": 1,
+        "array": [
+          1,
+          4,
+          3,
+          2,
+          6,
+          5
+        ],
+        "pointers": [],
+        "variables": {
+          "n": 6
+        },
+        "result": {
+          "type": "array",
+          "value": []
+        },
+        "description": "Calculate the size of the array."
+      },
+      {
+        "id": 2,
+        "array": [
+          1,
+          4,
+          3,
+          2,
+          6,
+          5
+        ],
+        "pointers": [],
+        "variables": {
+          "n": 6,
+          "temp": [
+            5,
+            6,
+            2,
+            3,
+            4,
+            1
+          ]
+        },
+        "result": {
+          "type": "array",
+          "value": []
+        },
+        "description": "Create a temporary array and populate it with reversed elements from the original array."
+      },
+      {
+        "id": 3,
+        "array": [
+          5,
+          6,
+          2,
+          3,
+          4,
+          1
+        ],
+        "pointers": [],
+        "variables": {
+          "n": 6,
+          "temp": [
+            5,
+            6,
+            2,
+            3,
+            4,
+            1
+          ]
+        },
+        "result": {
+          "type": "array",
+          "value": [
+            5,
+            6,
+            2,
+            3,
+            4,
+            1
+          ]
+        },
+        "description": "Copy the reversed elements back into the original array."
+      }
+    ]
+  }
